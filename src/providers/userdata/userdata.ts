@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+let config_key_name = "config";
+
 /*
   Generated class for the UserdataProvider provider.
 
@@ -11,18 +13,19 @@ export class UserdataProvider {
 
     private config = {
       showSlide: false,
-      name: "Charlitos da Silva",
-      username: "Charles"
+      name: "",
+      username: ""
 
     }
-    
+
   constructor() {
     
   }
 
+  // Funcoes para LocalStorage
   // Recupera dados do localstorage
-  getConfigData():any {
-    return localStorage.getItem["config"];
+  getConfigData(): any{
+    return localStorage.getItem(config_key_name);
   }
   // Grava os dados do localstorage
   // ? Opcional
